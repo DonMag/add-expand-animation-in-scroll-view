@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,54 +10,54 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView" customModule="xxx" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView" customModule="xxx" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62X-Om-XOw">
-                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qaj-pe-CBt">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-vt-Wzl">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-qs-2dw">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9O-cG-C9X">
-                                    <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxm-5Y-IQd">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="96"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqL-o9-6eD">
-                                    <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB5-6q-ZNB">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="96"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 </button>
                             </subviews>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="oSC-VN-bzn"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="BRX-vt-Wzl" firstAttribute="top" secondItem="62X-Om-XOw" secondAttribute="top" id="Aun-ba-EG2"/>
-                        <constraint firstAttribute="bottom" secondItem="BRX-vt-Wzl" secondAttribute="bottom" id="FZx-7e-Wla"/>
-                        <constraint firstItem="BRX-vt-Wzl" firstAttribute="leading" secondItem="62X-Om-XOw" secondAttribute="leading" id="IXW-S8-k8J"/>
-                        <constraint firstAttribute="trailing" secondItem="BRX-vt-Wzl" secondAttribute="trailing" id="hve-yl-EQc"/>
+                        <constraint firstItem="gbd-qs-2dw" firstAttribute="leading" secondItem="Qaj-pe-CBt" secondAttribute="leading" id="GGZ-Ig-2sH"/>
+                        <constraint firstAttribute="trailing" secondItem="gbd-qs-2dw" secondAttribute="trailing" id="RhE-br-Vgw"/>
+                        <constraint firstAttribute="bottom" secondItem="gbd-qs-2dw" secondAttribute="bottom" id="U3R-tF-PLJ"/>
+                        <constraint firstItem="gbd-qs-2dw" firstAttribute="top" secondItem="Qaj-pe-CBt" secondAttribute="top" id="r1I-bU-AuX"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="62X-Om-XOw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Kjv-cl-Tvr"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="62X-Om-XOw" secondAttribute="bottom" priority="750" id="N2u-lb-WcN"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="62X-Om-XOw" secondAttribute="trailing" id="mx1-iG-RkO"/>
-                <constraint firstItem="62X-Om-XOw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rsw-AB-Wtf"/>
+                <constraint firstAttribute="trailing" secondItem="Qaj-pe-CBt" secondAttribute="trailing" id="Hur-tZ-tmT"/>
+                <constraint firstItem="Qaj-pe-CBt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NTI-En-0RF"/>
+                <constraint firstItem="Qaj-pe-CBt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ck5-4h-BVR"/>
+                <constraint firstAttribute="bottom" secondItem="Qaj-pe-CBt" secondAttribute="bottom" id="gIO-8i-66B"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="borderView" destination="62X-Om-XOw" id="zex-Wb-SMP"/>
-                <outlet property="stackView" destination="BRX-vt-Wzl" id="q8t-9A-1tQ"/>
+                <outlet property="borderView" destination="Qaj-pe-CBt" id="Kz1-XU-GqI"/>
+                <outlet property="stackView" destination="gbd-qs-2dw" id="OQF-YK-icz"/>
             </connections>
-            <point key="canvasLocation" x="132" y="100"/>
+            <point key="canvasLocation" x="136.875" y="163.75"/>
         </view>
     </objects>
     <resources>

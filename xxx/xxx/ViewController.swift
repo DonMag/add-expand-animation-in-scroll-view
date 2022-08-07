@@ -18,29 +18,50 @@ extension UIView {
 }
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var stackView: UIStackView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        add(0)
-    }
-
-    @IBAction func add(_ sender: Any) {
-        let customView = CustomView.instanceFromNib()
-        
-        customView.hide()
-        stackView.addArrangedSubview(customView)
-        // Clear off horizontal swipe in animation caused by addArrangedSubview
-        stackView.superview?.layoutIfNeeded()
-        
-        customView.show()
-        // Perform expand animation.
-        UIView.animate(withDuration: 1) {
-            self.stackView.superview?.layoutIfNeeded()
-        }
-    }
-    
+	
+	@IBOutlet weak var stackView: UIStackView!
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		addCustomView(false)
+	}
+	
+	func addCustomView(_ animated: Bool) {
+		let customView = CustomView.instanceFromNib()
+		
+		stackView.addArrangedSubview(customView)
+		customView.isHidden = true
+		
+		if animated {
+			DispatchQueue.main.async {
+				UIView.animate(withDuration: 1) {
+					customView.isHidden = false
+				}
+			}
+		} else {
+			customView.isHidden = false
+		}
+	}
+	func delCustomView(_ animated: Bool) {
+		guard let v = stackView.arrangedSubviews.last else { return }
+		if animated {
+			UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
+				v.isHidden = true
+			}, completion: { _ in
+				v.removeFromSuperview()
+			})
+		} else {
+			v.removeFromSuperview()
+		}
+	}
+	@IBAction func del(_ sender: Any) {
+		delCustomView(true)
+	}
+	
+	@IBAction func add(_ sender: Any) {
+		addCustomView(true)
+	}
+	
 }
 
