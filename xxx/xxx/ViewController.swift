@@ -23,6 +23,15 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		// prevent animation issues when adding/removing the first/last custom view
+		let v = UIView()
+		stackView.addArrangedSubview(v)
+
+		// if stackView spacing is non-zero
+		if stackView.spacing != 0 {
+			stackView.setCustomSpacing(0, after: v)
+		}
 		
 		addCustomView(false)
 	}
@@ -44,7 +53,7 @@ class ViewController: UIViewController {
 		}
 	}
 	func delCustomView(_ animated: Bool) {
-		guard let v = stackView.arrangedSubviews.last else { return }
+		guard let v = stackView.arrangedSubviews.last as? CustomView else { return }
 		if animated {
 			UIView.animate(withDuration: 1.0, delay: 0.0, options: [], animations: {
 				v.isHidden = true
